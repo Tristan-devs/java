@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer src="objects.js"></script>
+    <title>Fancy Page </title>
+    <link href="style.css" rel="stlesheet">
+    <script defer src="DOMMManipulation.js"></script>
 </head>
 <body>
-    
+    <h1>*_* </h1>
+    <button onclick="darkMode()"> Dark Mode </button>
+    <button onclick="lightMode()">Light Mode</button>
+
+    <br>
+
+    <input type="text" id="counter" readonly="true">
+    <button onclick="reset()">Reset</button>
+    <button onclick="addOne()">+1</button>
+    <button onclick="addFive()">+5</button>
+    <button onclick="addTen()">+10</button>
+
+    <input type="text" id="textfield">
+    <button onclick="newElement('p', textfield.value)">Submit</button>
+    <br>
+    <button onclick="bigAndRed()">make him big</button>
+    <br>
+    <button onclick="accessDenied()">Secret page heer!</button>
+    <br>
+
+    <h2>Submit Your Text</h2>
+    <form onsubmit="event.preventDefault(); Submit();">
+        <label for="userInput">Enter your text:</label><br>
+        <input type="text" id="userInput" name="userInput"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="displayText"></p>
+    <br>
+<button onclick="newheader()">Add new header</button>
 </body>
 </html>
